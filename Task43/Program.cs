@@ -23,15 +23,22 @@ Console.Write("введите k2 = ");
 double k2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine();
 
+if(b1 == b2 && k1 == k2)
+{
+    Console.WriteLine("Заданные Вами прямые совпадают");
+    Console.WriteLine();
+    System.Environment.Exit(0);
+}
 if(k1 == k2)
 {
     Console.WriteLine("Заданные Вами прямые не имеют точки пересечения, т.е. они параллельны!!!");
     Console.WriteLine();
-    System.Environment.Exit(0);
 }
-
+else
+{
 double Xresult = (b2 - b1) / (k1 - k2);
 double Yresult = k1 * Xresult + b1;
 
 Console.WriteLine($"Координаты точки пересечения заданных Вами прямых A({Xresult}; {Yresult})");
 Console.WriteLine();
+}
